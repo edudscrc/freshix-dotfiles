@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR=~/archeva-01-dotfiles
+DOTFILES_DIR=~/freshix-dotfiles
 CONFIG_DIR=~/.config
 
 declare -A DOTFILES
@@ -32,11 +32,6 @@ done
 for file in "${!HOME_FILES[@]}"; do
     TARGET="${HOME_FILES[$file]}"
     SOURCE="$DOTFILES_DIR/$file"
-
-    if [ -f "$TARGET" ] && [ ! -L "$TARGET" ]; then
-        echo "Backing up existing $TARGET to $TARGET.bak"
-        mv "$TARGET" "$TARGET.bak"
-    fi
 
     cp "$SOURCE" "$TARGET"
     echo "Copied $SOURCE -> $TARGET"
