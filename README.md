@@ -3,8 +3,8 @@
 
 ## Installation
 ```bash
-git clone https://github.com/edudscrc/archeva-01-dotfiles.git
-cd archeva-01-dotfiles
+git clone https://github.com/edudscrc/freshix-dotfiles.git
+cd freshix-dotfiles
 chmod +x ./install.sh
 ./install.sh
 ```
