@@ -33,18 +33,11 @@
       "keyColor": "yellow",
       "outputColor": "yellow"
     },
-    "break",
     {
       "type": "wm",
       "key": ">",
-      "keyColor": "blue",
-      "outputColor": "blue"
-    },
-    {
-      "type": "theme",
-      "key": ">",
-      "keyColor": "blue",
-      "outputColor": "blue"
+      "keyColor": "yellow",
+      "outputColor": "yellow"
     },
     "break",
     {
