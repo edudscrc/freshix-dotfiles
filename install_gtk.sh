@@ -2,7 +2,7 @@
 
 cd ./Adwaita
 ./parse-sass.sh
-mkdir -p ~/.themes/ArchEVA-01/gtk-3.0
+mkdir -p ~/.themes/Freshix/gtk-3.0
 cat <<EOL >> "./gtk-contained-dark.css"
 
 box > scrolledwindow .view,
@@ -26,5 +26,5 @@ toolitem>widget>box>entry:backdrop {
 }
 
 EOL
-cp ./gtk-contained-dark.css ~/.themes/ArchEVA-01/gtk-3.0/gtk.css
-cp -r ./assets ~/.themes/ArchEVA-01/gtk-3.0/assets
+cp ./gtk-contained-dark.css ~/.themes/Freshix/gtk-3.0/gtk.css
+cp -r ./assets ~/.themes/Freshix/gtk-3.0/assets
