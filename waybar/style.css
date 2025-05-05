@@ -279,13 +279,15 @@
   transition: all 0.3s ease;
 }
 
-#bluetooth.off {
+#bluetooth.off,
+#bluetooth.no-controller {
   background-color: @bluetooth_background_off;
 
   transition: all 0.3s ease;
 }
 
-#bluetooth.off:hover {
+#bluetooth.off:hover,
+#bluetooth.no-controller:hover {
   background-color: @bluetooth_background_off_hover;
 
   transition: all 0.3s ease;
@@ -307,21 +309,19 @@
 
   background-color: @network_background_connected;
 
-  padding: 0 2px;
-
   transition: all 0.3s ease;
 }
 
 #network.wifi {
-  /* padding: 0 10px 0 2px; */
+  padding: 0 10px 0 2px;
 }
 
 #network.ethernet {
-  /* padding: 0 6px; */
+  padding: 0 2px;
 }
 
 #network.disconnected {
-  /* padding: 0 6px 0 1px; */
+  padding: 0 8px 0 3px;
   background-color: @network_background_off;
 
   transition: all 0.3s ease;
