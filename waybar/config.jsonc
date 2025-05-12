@@ -68,7 +68,7 @@
     }
   },
   "custom/weather": {
-    "format": {},
+    "format": "<span font='24px' rise='-3000'>󰅟</span> {}",
     "exec": "~/.config/waybar/assets/venv/bin/python3 ~/.config/waybar/assets/weather.py",
     "restart-interval": 300,
     "return-type": "json",
@@ -123,9 +123,9 @@
   },
   "network": {
     "interval": 60,
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-disconnected": "",
+    "format-wifi": "󰤥",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "",
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-wifi": "{essid}"
   },
@@ -155,17 +155,17 @@
     ]
   },
   "custom/lock": {
-    "format": "",
+    "format": "<big>󰌾</big>",
     "tooltip": false,
     "on-click": "hyprlock"
   },
   "custom/reboot": {
-    "format": "",
+    "format": "<big>󰜉</big>",
     "tooltip": false,
     "on-click": "systemctl reboot"
   },
   "custom/power": {
-    "format": "",
+    "format": "<big>󰐥</big>",
     "tooltip": false,
     "on-click": "systemctl poweroff"
   }

@@ -58,7 +58,7 @@
 /*----------------*/
 
 * {
-  font-family: "JetBrains Mono", "JetBrainsMono Nerd Font";
+  font-family: "Monaspace Radon", "Font Awesome 6 Free", monospace;
   font-weight: 600;
   font-size: 16px;
 }
@@ -317,7 +317,7 @@
 }
 
 #network.ethernet {
-  padding: 0 2px;
+  padding: 0 6px;
 }
 
 #network.disconnected {
@@ -354,15 +354,15 @@
 }
 
 #custom-power {
-  padding: 0 9px 0 5px;
+  padding: 0 5px;
 }
 
 #custom-lock {
-  padding: 0 8px 0 5px;
+  padding: 0 5px;
 }
 
 #custom-reboot {
-  padding: 0 8px 0 5px;
+  padding: 0 5px;
 }
 
 #custom-power:hover,

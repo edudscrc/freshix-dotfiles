@@ -10,7 +10,7 @@
     origin = top-right
 
     # Offset from the origin (horizontal, vertical)
-    offset = (6, 10)
+    offset = (10, 30)
 
     scale = 0
 

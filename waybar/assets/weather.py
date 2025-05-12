@@ -41,7 +41,7 @@ temp_max = (
 )
 
 out_data = {
-    "text": f"  {temp}C",
+    "text": f"{temp}C",
     "tooltip": f"Min: {temp_min}C\nMax: {temp_max}C",
     "class": status_code,
 }
