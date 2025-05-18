@@ -25,9 +25,9 @@ FILLED=$((volume / 10))
 EMPTY=$((10 - FILLED))
 
 if [ "$muted" = "yes" ]; then
-    BAR="󰖁 "
+    BAR=" "
 else
-    BAR="󰖀 "
+    BAR=" "
 fi
 
 for ((i = 0; i < FILLED; i++)); do BAR+="▮"; done
