@@ -11,7 +11,7 @@
 
 configuration {
 	modes: "drun";
-	font: "Jetbrains Mono 12";
+	font: "Monaspace Neon Frozen 12";
 	drun-display-format: "{name}";
 }
 

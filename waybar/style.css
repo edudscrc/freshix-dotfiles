@@ -64,8 +64,7 @@
 }
 
 #waybar {
-  /* background-color: @modules_background; */
-  background-color: rgba(18, 22, 31, 0.9);
+  background-color: @modules_background;
   border: 2px solid @modules_border;
   border-radius: 2px;
 }
