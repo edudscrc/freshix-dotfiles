@@ -68,7 +68,7 @@
     }
   },
   "custom/weather": {
-    "format": " {}",
+    "format": {},
     "exec": "~/.config/waybar/assets/venv/bin/python3 ~/.config/waybar/assets/weather.py",
     "restart-interval": 300,
     "return-type": "json",
@@ -79,10 +79,9 @@
     "format": "{}",
     "return-type": "json",
     "exec": "~/.config/waybar/assets/volume_bar.sh",
-    "interval": 1,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "tooltip": true
   },

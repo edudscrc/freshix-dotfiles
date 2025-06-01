@@ -8,9 +8,6 @@
 alias ls='eza -lsnew'
 alias lsa='eza -lasnew'
 
-# alias mpvhdr='ENABLE_HDR_WSI=1 mpv --vo=gpu-next --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk'
-alias mpvhdr='ENABLE_HDR_WSI=1 mpv --vo=dmabuf-wayland --target-colorspace-hint --gpu-api=vulkan --gpu-context=waylandvk'
-
 # Define color escape sequences
 RESET="\[\e[0m\]"    # Reset color
 BOLD="\[\e[1m\]"     # Bold text
@@ -28,5 +25,3 @@ parse_git_branch() {
 }
 
 PS1="[$BLUE\u@\h $CYAN\w$RESET]$MAGENTA\$(parse_git_branch | sed 's/^/  /') $YELLOW\$$RESET "
-
-fastfetch
