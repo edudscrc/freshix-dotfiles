@@ -18,22 +18,22 @@ configuration {
 /*-----Global-----*/
 
 * {
-	color0: #12161f;
-	color1: #b1535e;
-	color2: #d29d72;
-	color3: #6b90ad;
-	color4: #a5c6d4;
-	color5: #4e6a89;
-	color6: #8fa99c;
-	color7: #cfd8e3;
-	color8: #1a1f2b;
-	color9: #252b37;
+	color0: #fbf1c7;
+	color1: #cc241d;
+	color2: #98971a;
+	color3: #d79921;
+	color4: #458588;
+	color5: #b16286;
+	color6: #689d6a;
+	color7: #7c6f64;
+	color8: #ebdbb2;
+	color9: #d5c4a1;
 
 	fg-highlight: @color4;
 
-	bg-entry: @color0;
+	bg-entry: @color9;
 	fg-entry: @color4;
-	fg-placeholder: #a5c6d450;
+	fg-placeholder: #3c383650;
 
 	bg-listview: @color0;
 	fg-element: @color5;
@@ -42,7 +42,7 @@ configuration {
 	fg-element-selected: @color3;
 	border-color-element-selected: @color3;
 
-	bg-inputbar: @color8;
+	bg-inputbar: @color0;
 
 	border-color: @color3;
 

@@ -2,53 +2,41 @@
 /* Github: https://github.com/edudscrc */
 /* Waybar v0.12.0 */
 
-@define-color modules_background #12161f;
-@define-color modules_border #252b37;
+@define-color modules_background #fbf1c7;
+@define-color modules_border #d79921;
 
-@define-color workspaces_button_idle #12161f;
-@define-color workspaces_button_active #12161f;
-@define-color workspaces_button_background_idle #3b4c63;
-@define-color workspaces_button_background_active #6b90ad;
+@define-color workspaces_button_idle #d5c4a1;
+@define-color workspaces_button_active #3c3836;
 
-@define-color spotify_idle #8fa99c;
-@define-color spotify_hover #b1c3ba;
+@define-color spotify_idle #427b58;
+@define-color spotify_hover #689d6a;
 
-@define-color tray_menu #12161f;
-@define-color tray_menu_border #252b37;
-@define-color tray_menu_item #4e6a89;
-@define-color tray_menu_item_hover #4e6a89;
-@define-color tray_menu_item_hover_background #252b37;
+@define-color tray_menu #ebdbb2;
+@define-color tray_menu_border #d79921;
+@define-color tray_menu_item #3c3836;
+@define-color tray_menu_item_hover #3c3836;
+@define-color tray_menu_item_hover_background #a89984;
 
-@define-color clock_idle #4e6a89;
-@define-color clock_hover #7b96b4;
+@define-color clock_idle #3c3836;
+@define-color clock_hover #076678;
 
-@define-color weather_idle #6b90ad;
-@define-color weather_hover #97b1c6;
+@define-color weather_idle #3c3836;
+@define-color weather_hover #8f3f71;
 
-@define-color brightness_idle #4e6a89;
-@define-color brightness_hover #7b96b4;
+@define-color brightness_idle #3c3836;
+@define-color brightness_hover #9d0006;
 
-@define-color sound_idle #4e6a89;
-@define-color sound_hover #7b96b4;
+@define-color sound_idle #3c3836;
+@define-color sound_hover #9d0006;
 
-@define-color bluetooth_idle #12161f;
+@define-color bluetooth_idle #3c3836;
 @define-color bluetooth_hover #12161f;
-@define-color bluetooth_background_on #6b90ad;
-@define-color bluetooth_background_on_hover #97b1c6;
-@define-color bluetooth_background_off #3b4c63;
-@define-color bluetooth_background_off_hover #4f6584;
 
-@define-color network_idle #12161f;
+@define-color network_idle #3c3836;
 @define-color network_hover #12161f;
-@define-color network_background_connected #6b90ad;
-@define-color network_background_connected_hover #97b1c6;
-@define-color network_background_off #3b4c63;
-@define-color network_background_off_hover #4f6584;
 
-@define-color power_idle #12161f;
+@define-color power_idle #3c3836;
 @define-color power_hover #12161f;
-@define-color power_background_idle #b1535e;
-@define-color power_background_hover #c8878e;
 
 @define-color tooltip_background #12161f;
 @define-color tooltip_text #a5c6d4;
@@ -65,8 +53,7 @@
 
 #waybar {
   background-color: @modules_background;
-  border: 2px solid @modules_border;
-  border-radius: 2px;
+  border-bottom: 2px solid @modules_border;
 }
 
 /* .modules-left,
@@ -90,18 +77,15 @@
 
 #workspaces button {
   color: @workspaces_button_idle;
-  background-color: @workspaces_button_background_idle;
 
-  border-radius: 2px;
-  margin: 6px 2px;
-  padding: 0 4px;
+  margin: 0px 2px;
+  padding: 0px;
 
   transition: all 0.3s ease;
 }
 
 #workspaces button.active {
   color: @workspaces_button_active;
-  background-color: @workspaces_button_background_active;
 
   transition: all 0.3s ease;
 }
@@ -110,7 +94,6 @@
   background: none;
 
   color: @workspaces_button_active;
-  background-color: @workspaces_button_background_active;
 
   box-shadow: none;
   text-shadow: none;
@@ -242,36 +225,12 @@
   margin-right: 6px;
 }
 
-#bluetooth,
-#custom-pipe,
-#custom-pipe2,
-#network,
-#custom-power,
-#custom-lock,
-#custom-reboot {
-  margin: 8px 0;
-  border-radius: 2px;
-}
-
-/*---------------------*/
-/*-----CUSTOM PIPE-----*/
-/*---------------------*/
-
-#custom-pipe {
-  font-size: 6px;
-}
-
-#custom-pipe2 {
-  font-size: 4px;
-}
-
 /*-------------------*/
 /*-----BLUETOOTH-----*/
 /*-------------------*/
 
 #bluetooth {
   color: @bluetooth_idle;
-  background-color: @bluetooth_background_on;
 
   padding: 0 6px;
 
@@ -280,21 +239,18 @@
 
 #bluetooth.off,
 #bluetooth.no-controller {
-  background-color: @bluetooth_background_off;
 
   transition: all 0.3s ease;
 }
 
 #bluetooth.off:hover,
 #bluetooth.no-controller:hover {
-  background-color: @bluetooth_background_off_hover;
 
   transition: all 0.3s ease;
 }
 
 #bluetooth:hover {
   color: @bluetooth_hover;
-  background-color: @bluetooth_background_on_hover;
 
   transition: all 0.3s ease;
 }
@@ -305,8 +261,6 @@
 
 #network {
   color: @network_idle;
-
-  background-color: @network_background_connected;
 
   transition: all 0.3s ease;
 }
@@ -321,20 +275,17 @@
 
 #network.disconnected {
   padding: 0 8px 0 3px;
-  background-color: @network_background_off;
 
   transition: all 0.3s ease;
 }
 
 #network.disconnected:hover {
-  background-color: @network_background_off_hover;
 
   transition: all 0.3s ease;
 }
 
 #network:hover {
   color: @network_hover;
-  background-color: @network_background_connected_hover;
 
   transition: all 0.3s ease;
 }
@@ -347,28 +298,26 @@
 #custom-lock,
 #custom-reboot {
   color: @power_idle;
-  background-color: @power_background_idle;
 
   transition: all 0.3s ease;
 }
 
 #custom-power {
-  padding: 0 9px 0 5px;
+  padding: 0 9px 0 3px;
 }
 
 #custom-lock {
-  padding: 0 8px 0 5px;
+  padding: 0 6px 0 3px;
 }
 
 #custom-reboot {
-  padding: 0 8px 0 5px;
+  padding: 0 6px 0 3px;
 }
 
 #custom-power:hover,
 #custom-lock:hover,
 #custom-reboot:hover {
   color: @power_hover;
-  background-color: @power_background_hover;
 
   transition: all 0.3s ease;
 }
