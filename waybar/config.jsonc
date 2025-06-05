@@ -18,12 +18,15 @@
     "modules": [
       "clock",
       "custom/weather",
-      "custom/wl-gammarelay-brightness-aux"
+      "custom/wl-gammarelay-brightness-aux",
+      "custom/wl-gammarelay-temperature-aux"
     ]
   },
   "group/group-right": {
     "orientation": "horizontal",
     "modules": [
+      "battery",
+      "custom/wl-gammarelay-temperature",
       "custom/wl-gammarelay-brightness",
       "custom/wireplumber",
       "group/group-end",
@@ -43,6 +46,17 @@
     "icon-size": 18,
     "spacing": 6
   },
+
+  "battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon} ",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+},
 
   "clock": {
     "format": "{:%a %d %b %H:%M}",
@@ -81,6 +95,15 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "tooltip": true
   },
+  "custom/wl-gammarelay-temperature": {
+        "format": "{}",
+        "return-type": "json",
+        "tooltip": true,
+        "exec": "~/.config/waybar/assets/temperature_bar.sh",
+        "interval": 2,
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +500",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -500"
+    },
   "custom/wl-gammarelay-brightness": {
     "format": "{}",
     "return-type": "json",
@@ -94,6 +117,11 @@
     "format": "",
     "tooltip": false,
     "exec": "wl-gammarelay-rs watch {bp}"
+  },
+  "custom/wl-gammarelay-temperature-aux": {
+    "format": "",
+    "tooltip": false,
+    "exec": "wl-gammarelay-rs watch {t}"
   },
   "group/group-end": {
     "orientation": "horizontal",
