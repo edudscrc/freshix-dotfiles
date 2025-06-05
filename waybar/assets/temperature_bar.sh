@@ -12,4 +12,4 @@ BAR=""
 for ((i = 0; i < FILLED; i++)); do BAR+="▮"; done
 for ((i = 0; i < EMPTY; i++)); do BAR+="▯"; done
 
-echo "{\"text\": \"$BAR\", \"tooltip\": \"Brightness: ${PERCENT}%\", \"class\": \"custom-wl-gammarelay-temperature\"}"
+echo "{\"text\": \" $BAR\", \"tooltip\": \"Temperature: ${PERCENT}%\", \"class\": \"custom-wl-gammarelay-temperature\"}"
