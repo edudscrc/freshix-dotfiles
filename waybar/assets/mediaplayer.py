@@ -67,6 +67,8 @@ class PlayerManager:
     def write_output(self, text, player):
         logger.debug(f"Writing output: {text}")
 
+        if len(text) > 40:
+            text = text[:40]
         output = {"text": text,
                   "class": "custom-" + player.props.player_name,
                   "alt": player.props.player_name}

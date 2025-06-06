@@ -3,10 +3,9 @@
 /* Waybar v0.12.0 */
 
 @define-color modules_background #fbf1c7;
-@define-color modules_border #d79921;
 
-@define-color workspaces_button_idle #d5c4a1;
-@define-color workspaces_button_active #3c3836;
+@define-color workspaces_button_off #d5c4a1;
+@define-color workspaces_button_on #3c3836;
 
 @define-color spotify_idle #427b58;
 @define-color spotify_hover #689d6a;
@@ -22,6 +21,9 @@
 
 @define-color weather_idle #3c3836;
 @define-color weather_hover #8f3f71;
+
+@define-color temperature_idle #3c3836;
+@define-color temperature_hover #9d0006;
 
 @define-color brightness_idle #3c3836;
 @define-color brightness_hover #9d0006;
@@ -53,39 +55,28 @@
 
 #waybar {
   background-color: @modules_background;
-  border-bottom: 2px solid @modules_border;
 }
-
-/* .modules-left,
-.modules-center,
-.modules-right {
-}*/
-
-/* #group-left,
-#group-center,
-#group-right {
-} */
 
 /*--------------------*/
 /*-----WORKSPACES-----*/
 /*--------------------*/
 
 #workspaces {
-  margin-left: 4px;
-  margin-right: 10px;
+  margin-left: 6px;
+  margin-right: 16px;
 }
 
 #workspaces button {
-  color: @workspaces_button_idle;
+  color: @workspaces_button_off;
 
-  margin: 0px 2px;
+  margin: 0px;
   padding: 0px;
 
   transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-  color: @workspaces_button_active;
+  color: @workspaces_button_on;
 
   transition: all 0.3s ease;
 }
@@ -93,7 +84,7 @@
 #workspaces button:hover {
   background: none;
 
-  color: @workspaces_button_active;
+  color: @workspaces_button_on;
 
   box-shadow: none;
   text-shadow: none;
@@ -110,7 +101,7 @@
 #custom-spotify {
   color: @spotify_idle;
 
-  margin-right: 12px;
+  margin-right: 16px;
 
   transition: all 0.3s ease;
 }
@@ -120,18 +111,6 @@
 
   transition: all 0.3s ease;
 }
-
-/*--------------*/
-/*-----TRAY-----*/
-/*--------------*/
-
-/* #tray {
-}
-
-#tray > .active,
-#tray > .passive,
-#tray > .needs-attention {
-} */
 
 #tray menu {
   background-color: @tray_menu;
@@ -154,7 +133,7 @@
 #clock {
   color: @clock_idle;
 
-  margin-right: 12px;
+  margin-right: 16px;
 
   transition: all 0.3s ease;
 }
@@ -186,7 +165,7 @@
 /*----------------------------------*/
 
 #custom-wl-gammarelay-temperature {
-  color: @brightness_idle;
+  color: @temperature_idle;
 
   margin-right: 12px;
 
@@ -194,7 +173,7 @@
 }
 
 #custom-wl-gammarelay-temperature:hover {
-  color: @brightness_hover;
+  color: @temperature_hover;
 
   transition: all 0.3s ease;
 }
@@ -224,7 +203,7 @@
 #custom-wireplumber {
   color: @sound_idle;
 
-  margin-right: 12px;
+  margin-right: 16px;
 
   transition: all 0.3s ease;
 }
@@ -240,7 +219,7 @@
 /*-------------------*/
 
 #group-end {
-  margin-right: 6px;
+  margin-right: 16px;
 }
 
 /*-------------------*/
@@ -250,20 +229,12 @@
 #bluetooth {
   color: @bluetooth_idle;
 
-  padding: 0 6px;
+  margin-right: 12px;
 
   transition: all 0.3s ease;
 }
 
-#bluetooth.off,
-#bluetooth.no-controller {
-
-  transition: all 0.3s ease;
-}
-
-#bluetooth.off:hover,
-#bluetooth.no-controller:hover {
-
+#bluetooth.off {
   transition: all 0.3s ease;
 }
 
@@ -279,25 +250,6 @@
 
 #network {
   color: @network_idle;
-
-  transition: all 0.3s ease;
-}
-
-#network.wifi {
-  padding: 0 10px 0 2px;
-}
-
-#network.ethernet {
-  padding: 0 2px;
-}
-
-#network.disconnected {
-  padding: 0 8px 0 3px;
-
-  transition: all 0.3s ease;
-}
-
-#network.disconnected:hover {
 
   transition: all 0.3s ease;
 }
@@ -321,15 +273,15 @@
 }
 
 #custom-power {
-  padding: 0 9px 0 3px;
-}
-
-#custom-lock {
-  padding: 0 6px 0 3px;
+  padding-right: 12px;
 }
 
 #custom-reboot {
-  padding: 0 6px 0 3px;
+  padding-right: 12px;
+}
+
+#custom-lock {
+  padding-right: 12px;
 }
 
 #custom-power:hover,
